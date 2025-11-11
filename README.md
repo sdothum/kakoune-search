@@ -3,7 +3,11 @@
 **NOTE:** This is a fork of kakoune-find and has been modified to:
 
 1. present the search results in a 2 column format: buffer:line:column (right
-justified) and matching text (left justified)
+justified) and matching text (left justified). This presentation improves source
+code
+readability (IMO) at the expense of screen real estate (widening the terminal
+window will often
+be necessary)
 2. highlight the buffer:line:column as a single highlight block
 3. allow setting the highlight face (search_coordinate -- default:
 SecondarySelect) for the buffer:line:column block
@@ -13,6 +17,8 @@ and (search_select -- default: comment) pattern match
 the *search* buffer if your workflow switches out of that view -- WARNING: changes
 made outside of the view will not be reflected in the view and the search
 should be reinitiated to refresh the view)
+5. kakoune-find can also be loaded to provide its more compressed view when
+necessary (as the commands in this repo are prefixed with "search")
 
 [kakoune](http://kakoune.org) plugin to search for a pattern in all open buffers, and optionally replace it. Works similarly to `grep.kak`, but does not operate on files.
 
