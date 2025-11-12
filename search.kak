@@ -1,7 +1,8 @@
 
 # SEE:  find.kak from https://github.com/occivink/kakoune-find.git
 #
-# NOTE: 1. commands have been renamed to "search-*" for distinction from original kakoune-find
+# NOTE: 1. commands have been renamed to "search-*"
+#          to support dual access to the non-columnar *find* buffer view
 #       2. modified for columnar output (vertical alignment of line content):
 #              right justify -> ..buffer:line:column│  source code..  <- left justify
 #          for enhanced readability of filtered lines
