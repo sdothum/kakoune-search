@@ -164,4 +164,11 @@ define-command search-previous-match -docstring 'Jump to the previous search mat
 	try %{ evaluate-commands -client * %{ execute-keys %opt{search_current_line}g } }
 }
 
+define-command -hidden search-view -docstring 'restore search buffer view' %{
+	if %{ [ "$kak_bufname" = '*search*' ] } %{
+		set-register / %opt{search_pattern}  # NOTE: restore *search* buffer register
+		execute-keys gh                      # HACK: reposition cursor to colunm 1 to clear buffer:line:column highlight
+	}
+}
+
 # kak: filetype=kak
